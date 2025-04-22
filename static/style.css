@@ -10,18 +10,29 @@ h1 {
     color: #4F4F4F;
 }
 
+.posts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
 .post {
     background-color: #FFF;
     border: 1px solid #DDD;
     padding: 20px;
-    margin-bottom: 20px;
     border-radius: 8px;
+    box-sizing: border-box;
 }
 
-.post h2 {
-    margin-top: 0;
+.posts-container .post {
+    flex: 1 1 calc(33.33% - 20px); /* One-third width */
+    max-width: calc(33.33% - 20px);
 }
 
-.post p {
-    margin: 10px 0;
+@media (max-width: 768px) {
+    .posts-container .post {
+        flex: 1 1 100%; /* Full width on smaller screens */
+        max-width: 100%;
+    }
 }

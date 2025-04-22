@@ -33,10 +33,11 @@ body {
     flex-direction: column;
     gap: 5px; /* Adds spacing between label and input */
 }
-
+.form-group label {
+    margin-top:10px;
+}
 .form-group input,
 .form-group textarea {
-    width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -65,6 +66,7 @@ body {
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 4px;
+    margin-top: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
